@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="./src/js/main.js"></script>
 </head>
 <body>
     
@@ -70,7 +71,7 @@
 
     <main class="main">
 
-        <section class="hero">
+        <div class="hero">
 
             <section class="heroContent">
 
@@ -97,7 +98,7 @@
 
             </div>
 
-        </section>
+        </div>
 
         <section class="about">
 
@@ -145,9 +146,9 @@
 
                         <span class="aboutContainerInfoContent__span">THE SHORT ABOUT</span>
 
-                        <p class="aboutContainerInfoContent__paragraph">Hi, I’m Taylor. I live in Vancouver, WA and my favorite color is green. I served in the US Army for 5 years as a Cryptologic Linguist. Then I went to college and studied design.</p>
+                        <p class="aboutContainerInfoContent__paragraph paragraph">Hi, I’m Taylor. I live in Vancouver, WA and my favorite color is green. I served in the US Army for 5 years as a Cryptologic Linguist. Then I went to college and studied design.</p>
 
-                        <p class="aboutContainerInfoContent__paragraph">Lately I've been leading the design of tomorrow's visual development tools. Watch out, Webflow!</p>
+                        <p class="aboutContainerInfoContent__paragraph paragraph">Lately I've been leading the design of tomorrow's visual development tools. Watch out, Webflow!</p>
 
                         <ul class="aboutContainerInfoContentList">
 
@@ -286,86 +287,90 @@
 
         <section class="projects">
 
+            <!-- <h2 class="projects__title subtitle">Works</h2> -->
             <h2 class="projects__title subtitle">Works</h2>
 
-            <div class="project project--first">
+            <div class="projectContainer">
 
-                <div class="projectContent">
+                <div class="project project--first">
 
-                    <span class="projectContent__span">Lorem ipsum dolor sit amet consectetur.</span>
-
-                    <div class="projectContentLanguages">
-
-                        <span class="projectContentLanguages__span">HTML</span>
-                        <span class="projectContentLanguages__span">CSS</span>
-                        <span class="projectContentLanguages__span">JS</span>
-
+                    <div class="projectContent">
+    
+                        <span class="projectContent__span">ANCO COMPANY</span>
+    
+                        <div class="projectContentLanguages">
+    
+                            <span class="projectContentLanguages__span">HTML</span>
+                            <span class="projectContentLanguages__span">CSS</span>
+                            <span class="projectContentLanguages__span">JS</span>
+    
+                        </div>
+    
+                        <a href="#" target="_blank" class="projectContent__link">See Proyect</a>
+    
                     </div>
-
-                    <a href="#" target="_blank" class="projectContent__link">LinkWeb</a>
-
+    
+                    <div class="projectImg">
+    
+                        <img src="./image/messi.webp" alt="" class="projectImg__img">
+    
+                    </div>
+    
                 </div>
-
-                <div class="projectImg">
-
-                    <img src="" alt="" class="projectImg__img">
-
+    
+                <div class="project project--second">
+    
+                    <div class="projectContent">
+    
+                        <span class="projectContent__span">ROCK Y VIDA</span>
+    
+                        <div class="projectContentLanguages">
+    
+                            <span class="projectContentLanguages__span">HTML</span>
+                            <span class="projectContentLanguages__span">CSS</span>
+                            <span class="projectContentLanguages__span">JS</span>
+    
+                        </div>
+    
+                        <a href="#" target="_blank" class="projectContent__link">See Proyect</a>
+    
+                    </div>
+    
+                    <div class="projectImg">
+                        
+                        <img src="./image/messi.webp" alt="" class="projectImg__img">
+                        
+                    </div>
+    
+                </div>
+    
+                <div class="project project--third">
+    
+                    <div class="projectContent">
+    
+                        <span class="projectContent__span">PORFOLIO</span>
+    
+                        <div class="projectContentLanguages">
+    
+                            <span class="projectContentLanguages__span">HTML</span>
+                            <span class="projectContentLanguages__span">CSS</span>
+                            <span class="projectContentLanguages__span">JS</span>
+    
+                        </div>
+    
+                        <a href="#" target="_blank" class="projectContent__link">See Proyect</a>
+    
+                    </div>
+    
+                    <div class="projectImg">
+    
+                        <img src="./image/messi.webp" alt="" class="projectImg__img">
+                        
+                    </div>
+    
                 </div>
 
             </div>
-
-            <div class="project project--second">
-
-                <div class="projectContent">
-
-                    <span class="projectContent__span">Lorem ipsum dolor sit amet consectetur.</span>
-
-                    <div class="projectContentLanguages">
-
-                        <span class="projectContentLanguages__span">HTML</span>
-                        <span class="projectContentLanguages__span">CSS</span>
-                        <span class="projectContentLanguages__span">JS</span>
-
-                    </div>
-
-                    <a href="#" target="_blank" class="projectContent__link">LinkWeb</a>
-
-                </div>
-
-                <div class="projectImg">
-
-                    <img src="" alt="" class="projectImg__img">
-                    
-                </div>
-
-            </div>
-
-            <div class="project project--third">
-
-                <div class="projectContent">
-
-                    <span class="projectContent__span">Lorem ipsum dolor sit amet consectetur.</span>
-
-                    <div class="projectContentLanguages">
-
-                        <span class="projectContentLanguages__span">HTML</span>
-                        <span class="projectContentLanguages__span">CSS</span>
-                        <span class="projectContentLanguages__span">JS</span>
-
-                    </div>
-
-                    <a href="#" target="_blank" class="projectContent__link">LinkWeb</a>
-
-                </div>
-
-                <div class="projectImg">
-
-                    <img src="" alt="" class="projectImg__img">
-                    
-                </div>
-
-            </div>
-
 
         </section>
 
@@ -379,7 +384,7 @@
 
                     <h3 class="contactContainerContent__title subsubtitle">GET IN TOUCH</h3>
 
-                    <p class="contactContainerContent__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quo placeat, impedit, ea architecto odit molestias doloribus eveniet non quaerat fugiat aperiam adipisci nisi deserunt.</p>
+                    <p class="contactContainerContent__paragraph paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quo placeat, impedit, ea architecto odit molestias doloribus eveniet non quaerat fugiat aperiam adipisci nisi deserunt.</p>
 
                     <div class="contactContainerContentLinks">
 
@@ -410,7 +415,7 @@
         
         <div class="footerContainer">
 
-            <img src="" alt="" class="footer__img">
+            <a href="#" class="footerContainer__logo">JOAQUING</a>
         
             <div class="footerContainerDarkMode">
                 <a href="#" class="footerContainerDarkMode__link"><img src="./image/icons/sun.svg" alt="" class="footerContainerDarkMode__img"></a>
@@ -423,13 +428,11 @@
            
             <span class="footerCopyright__span"></span>
             
-            <a href="#" class="footerCopyrightArrowLink"><img src="" alt="" class="footerCopyrightArrowLink__img"></a>
+            <a href="#" class="footerCopyrightArrowLink"><img src="./image/icons/arrowUp.svg" alt="Arrow up Svg" class="footerCopyrightArrowLink__img"></a>
 
         </div>
 
     </footer>
-
-    <script src="./src/js/main.js"></script>
 </body>
 </html> 
 
