@@ -1,0 +1,357 @@
+:root {
+    /* 
+    --fs-title-tablet:;
+    --fs-title-portatil:;
+    --fs-title-portatilL:;
+
+    --fs-subtitle-tablet:;
+    --fs-subtitle-portatil:;
+    --fs-subtitle-portatilL:;
+
+    
+    --fs-paragraph-tablet:;
+    --fs-paragraph-portatil:;
+    --fs-paragraph-portatilL:;
+
+   
+    --fs-quotes-tablet:;
+    --fs-quotes-portatil:;
+    --fs-quotes-portatilL:;
+
+    --fs-languagesTitle-mobile:;
+    --fs-languagesTitle-tablet:;
+    --fs-languagesTitle-portatil:;
+    --fs-languagesTitle-portatilL:;
+
+    --fs-projectsTitle-mobile:;
+    --fs-projectsTitle-tablet:;
+    --fs-projectsTitle-portatil:;
+    --fs-projectsTitle-portatilL:;
+
+    --fs-projectsLanguages-mobile:;
+    --fs-projectsLanguages-tablet:;
+    --fs-projectsLanguages-portatil:;
+    --fs-projectsLanguages-portatilL:;
+
+    --padding-tablet:;
+    --padding-portatil:;
+    --padding-portatilL:;
+   
+    --dm-clr-title:;
+
+    --dm-clr-paragraph:;
+
+    --dm-clr-border:;
+
+    --dm-bg-body:;
+    --dm-bg-header:;
+
+    --dm-bg-link:;
+    
+    --lm-bg-about:;
+    --dm-bg-about:; */
+    --fs-title-mobile:64px;
+    --fs-subtitle-mobile:24px;
+    --fs-paragraph-mobile:16px;
+    --fs-quotes-mobile:14px;
+    --ff-title:'Anton', sans-serif;
+    --ff-paragraph:'Roboto', sans-serif;
+    --lm-clr-title:#08081B;
+    --lm-clr-paragraph:#05051C;
+    --lm-clr-border:#121212;
+    --lm-bg-body:#FDFBF1;
+    --lm-bg-header: #fff;
+    --lm-bg-link:#20204D;
+    --padding-mobile:0 15px;
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        
+    }
+}
+
+.whiteMode {
+
+}
+
+.darkMode {
+
+}
+
+* , ::before , ::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--fs-paragraph-mobile);
+    font-family: var(--ff-paragraph);
+    background-color: var(--lm-bg-body);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1 , h2 , h3, h4, h5 {
+    font-family: var(--ff-title);
+}
+
+.subtitle {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    padding: 10px 15px;
+    border: 3px solid var(--lm-clr-border);
+}
+
+.subtitle::after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: calc(100vw - 33px);
+    height: 3px;
+    background-color: var(--lm-clr-border);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-mobile);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    background-color: var(--lm-bg-header);
+    z-index: 10;
+}
+
+.headerLink {
+    font-size: 32px;
+    font-family: var(--ff-title);
+    text-decoration: none;
+    color: var(--lm-clr-title);
+}
+
+.menuOpen {
+    display: none;
+}
+
+.nav {
+    display: none;
+}
+
+.darkMode {
+    display: none;
+}
+
+.main {
+    padding: var(--padding-mobile);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroContent {
+    margin-bottom: 30px;
+}
+
+.heroContent__title {
+    font-size: var(--fs-title-mobile);
+}
+
+.heroContent__paragraph {
+    font-size: var(--fs-paragraph-mobile);
+}
+
+.heroContent__span {
+    color: red;
+}
+
+.heroContent__blockquote {
+    margin: 0;
+}
+
+.heroContent__blockquoteParagraph {
+    font-size: var(--fs-quotes-mobile);
+}
+
+.heroImg {
+    position: relative;
+}
+
+.heroImg::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    top: 0;
+    left: calc(100% - 10px);
+    background-color: var(--lm-clr-border);
+}
+
+.heroImg__img {
+    display: none;
+}
+
+.heroImgCv__span {
+    display: none;
+}
+
+.heroImgCv__img {
+    display: block;
+    height: 345px;
+    object-fit: cover;
+    border: 5px solid var(--lm-clr-border);
+}
+
+.aboutContainer {
+    display: grid;
+    grid-template-areas: 
+    "aboutContainerInfo"
+    "aboutContainerImg";
+    grid-template-rows: 1fr auto;
+    height: calc(100vh - 62.39px);
+    border: 3px solid var(--lm-clr-border);
+}
+
+.aboutContainerInfo {
+    grid-area: aboutContainerInfo;
+}
+
+.aboutContainerInfoTitles {
+    border-bottom: 3px solid var(--lm-clr-border);
+}
+
+.aboutContainerInfoTitles__span {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+.aboutContainerInfoSubtitles {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aboutContainerInfoSubtitles::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: var(--lm-clr-border);
+}
+
+.aboutContainerInfoSubtitles__span {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.aboutContainerInfoContent {
+    padding: 0 15px;
+}
+
+.aboutContainerInfoContent__arrow {
+    display: inline-block;
+    rotate: 180deg;
+}
+
+.aboutContainerInfoContent__span {
+    display: block;
+    font-weight: bold;
+}
+
+.aboutContainerInfoContentList {
+    padding-left: 15px;
+}
+
+.aboutContainerInfoContentList__item {
+    margin-bottom: 5px;
+}
+
+.aboutContainerImg {
+    grid-area: aboutContainerImg;
+}
+
+.aboutContainerImg__img {
+    display: block;
+}
+
+.aboutContainerImgLinks {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aboutContainerImgLinks::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: var(--lm-clr-border);
+}
+
+.aboutContainerImgLinks__link {
+    padding: 15px 0;
+    text-align: center;
+    border-top: 3px solid var(--lm-clr-border);
+    color: var(--lm-clr-paragraph);
+    text-decoration: none;
+}
+
+.skillContainers {
+    height: calc(100vh - 62.39px);
+    border: 3px solid var(--lm-clr-border);
+}
+
+.skillContainer {
+    
+}
+
+.skillContainer__span {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 3px solid var(--lm-clr-border);
+}
+
+.skillContainer__span--border {
+    border-top: 3px solid var(--lm-clr-border);
+}
+.skillContainerBox__img {
+    width: 50px;
+    height: 50px;
+}
+
