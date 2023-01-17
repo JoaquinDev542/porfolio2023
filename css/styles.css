@@ -23,7 +23,6 @@
     --fs-languagesTitle-portatil:;
     --fs-languagesTitle-portatilL:;
 
-    --fs-projectsTitle-mobile:;
     --fs-projectsTitle-tablet:;
     --fs-projectsTitle-portatil:;
     --fs-projectsTitle-portatilL:;
@@ -54,6 +53,7 @@
     --fs-subtitle-mobile:24px;
     --fs-paragraph-mobile:16px;
     --fs-quotes-mobile:14px;
+    --fs-projectsTitle-mobile:64px;
     --ff-title:'Anton', sans-serif;
     --ff-paragraph:'Roboto', sans-serif;
     --lm-clr-title:#08081B;
@@ -61,6 +61,7 @@
     --lm-clr-border:#121212;
     --lm-bg-body:#FDFBF1;
     --lm-bg-header: #fff;
+    --lm-clr-link:#f5f5f5;
     --lm-bg-link:#20204D;
     --padding-mobile:0 15px;
 
@@ -125,6 +126,10 @@ h1 , h2 , h3, h4, h5 {
     width: calc(100vw - 33px);
     height: 3px;
     background-color: var(--lm-clr-border);
+}
+
+.paragraph {
+    line-height: 1.5;
 }
 
 .header {
@@ -235,7 +240,7 @@ h1 , h2 , h3, h4, h5 {
     "aboutContainerInfo"
     "aboutContainerImg";
     grid-template-rows: 1fr auto;
-    height: calc(100vh - 62.39px);
+    height: calc(100vh - 58px);
     border: 3px solid var(--lm-clr-border);
 }
 
@@ -323,7 +328,7 @@ h1 , h2 , h3, h4, h5 {
 }
 
 .aboutContainerImgLinks__link {
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
     border-top: 3px solid var(--lm-clr-border);
     color: var(--lm-clr-paragraph);
@@ -331,12 +336,10 @@ h1 , h2 , h3, h4, h5 {
 }
 
 .skillContainers {
-    height: calc(100vh - 62.39px);
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: calc(100vh - 58px);
     border: 3px solid var(--lm-clr-border);
-}
-
-.skillContainer {
-    
 }
 
 .skillContainer__span {
@@ -355,3 +358,151 @@ h1 , h2 , h3, h4, h5 {
     height: 50px;
 }
 
+.skillContainerBoxs {
+    display: flex;
+}
+
+.projectContainer {
+    display: grid;
+    gap: 30px;
+}
+
+.project {
+    position: relative;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: calc(100vh - 58px);
+    border: 3px solid var(--lm-clr-border);
+}
+
+.project::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc(100% - 7px);
+    width: 7px;
+    height: 100%;
+    background-color: var(--lm-clr-border);
+}
+
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+} 
+
+.projectContent__span {
+    display: block;
+    font-size: var(--fs-projectsTitle-mobile);
+    font-family: var(--ff-title);
+}
+
+.projectContentLanguages {
+    display: flex;
+    gap: 25px;
+    margin: 35px 0 35px 0;
+}
+
+.projectContentLanguages__span {
+    min-width: 70px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 3px solid var(--lm-clr-border);
+}
+
+.projectContent__link {
+    align-self: flex-start;
+    padding: 15px 35px;
+    text-decoration: none;
+    color: var(--lm-clr-link);
+    background-color: var(--lm-bg-link);
+}
+
+.projectImg__img {
+    height: 100%;
+    object-fit: cover;
+    border-top: 3px solid var(--lm-clr-border);
+}
+
+.contactContainer {
+    position: relative;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: calc(100vh - 58px);
+    border: 3px solid var(--lm-clr-border);
+    padding: 0 15px;
+    padding-bottom: 20px;
+}
+
+.contactContainer::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: calc(100% - 7px);
+    width: 7px;
+    height: 100%;
+    background-color: var(--lm-clr-border);
+}
+
+.contactContainerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactContainerContent__title {
+    font-size: var(--fs-title-mobile);
+    margin: 20px 0 20px 0;
+}
+
+.contactContainerContentLinks {
+    display: flex;
+    gap: 25px;
+}
+
+.contactContainerContentLinks__link {
+    min-width: 122px;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--lm-clr-link);
+    background-color: var(--lm-bg-link);
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--lm-clr-border);
+}
+
+.input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 3px solid var(--lm-clr-border);
+    outline: none;
+}
+
+.textarea {
+    width: 100%;
+    height: 230px;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 3px solid var(--lm-clr-border);
+    outline: none;
+    resize: vertical;
+}
+
+.form__send {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    align-self: flex-end;
+    justify-self: flex-end;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--lm-clr-link);
+    background-color: var(--lm-bg-link);
+}
