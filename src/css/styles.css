@@ -18,7 +18,6 @@
       --fs-quotes-portatil:;
       --fs-quotes-portatilL:;
   
-      --fs-languagesTitle-mobile:;
       --fs-languagesTitle-tablet:;
       --fs-languagesTitle-portatil:;
       --fs-languagesTitle-portatilL:;
@@ -502,9 +501,35 @@
   
   .footer {
     padding: 0 15px;
+    margin: 20px 0;
   }
   
   .footerContainer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footerContainer__logo {
+    font-size: 32px;
+    font-family: var(--ff-title);
+    text-decoration: none;
+    color: var(--lm-clr-paragraph);
+  }
+
+  .footerCopyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid var(--lm-clr-border);
   }
   
+  .footerCopyright__span {
+    display: block;
+    padding: 0 10px;
+    font-size: 14px;
+ }
+
+  .footerCopyrightArrowLink {
+    border-left: 3px solid var(--lm-clr-border);
+  }
