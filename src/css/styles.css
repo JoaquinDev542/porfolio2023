@@ -188,6 +188,7 @@
   
   .heroContent__title {
     font-size: var(--fs-title-mobile);
+    margin: 25px 0;
   }
   
   .heroContent__paragraph {
