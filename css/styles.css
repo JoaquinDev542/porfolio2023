@@ -67,20 +67,20 @@
 }
 
 @media screen and (prefers-color-scheme: dark) {
-  :root {
-  }
+  /* :root {
+  } */
 }
 
 @media screen and (prefers-color-scheme: light) {
-  :root {
-  }
+  /* :root {
+  } */
 }
 
-.whiteMode {
+/* .whiteMode {
 }
 
 .darkMode {
-}
+} */
 
 *,
 ::before,
@@ -288,7 +288,7 @@ h5 {
 
 .aboutContainerInfoContent__arrow {
   display: inline-block;
-  rotate: 180deg;
+  transform:rotate(180deg);
 }
 
 .aboutContainerInfoContent__span {
