@@ -408,18 +408,6 @@
     border: 3px solid var(--lm-clr-border);
   }
 
-  .projectContentLanguages__span--html {
-    /* border:3px solid #ff6d00; */
-  }
-
-  .projectContentLanguages__span--css {
-    /* border:3px solid #059be5; */
-  }
-
-  .projectContentLanguages__span--js {
-    /* border:3px solid #ffd600; */
-  }
-  
   .projectContent__link {
     margin-left: 15px;
     align-self: flex-start;
