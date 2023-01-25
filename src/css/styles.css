@@ -148,7 +148,7 @@
     left: 0;
     width: 100vw;
     z-index: 10;
-    /* background-color: transparent; */
+    background-color: transparent;
     background-color: var(--lm-bg-header);
   }
 
@@ -173,7 +173,54 @@
   .menuOpen {
     display: none;
   }
+
+  .menuOpen.active {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    display: block;
+    background-color: var(--lm-bg-header);
+  }
   
+  .menuOpenList {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .menuOpenList__item {
+    border-bottom: 3px solid var(--lm-clr-border);
+  }
+
+  .menuOpenList__item--first {
+    border-top: 3px solid var(--lm-clr-border);
+  }
+  
+  .menuOpenList__link {
+    display: block;
+    padding: 15px 0;
+    padding-left: 15px;
+    text-decoration: none;
+    color: var(--lm-clr-paragraph);
+  }
+  
+  .menuOpenCv {
+    border-bottom: 3px solid var(--lm-clr-border);
+  }
+
+  .menuOpenCv__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    text-decoration: none;
+  }
+
+  .menuOpenCv__span {
+    color: var(--lm-clr-paragraph);
+  }
+
   .nav {
     display: none;
   }
@@ -612,6 +659,20 @@
       padding: var(--padding-tablet);
     }
 
+    .menuOpen.active {
+      top: 48px;
+    }
+
+    .menuOpenList__link {
+      padding: 15px 0;
+      padding-left: 35px;
+    }
+    
+    .menuOpenCv__link {
+      padding: 0 35px;
+      height: 50.69px;
+    }
+
     .main {
       padding: var(--padding-tablet);
       gap: 100px;
@@ -731,6 +792,35 @@
 
   @media screen and (min-width:1024px) {
 
+    .hamburger {
+      display: none;
+    }
+
+    .navContainer {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .nav {
+      display: block;
+    }
+
+    .navList {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .navList__link {
+      color: var(--lm-clr-paragraph);
+      text-decoration: none;
+    }
+
+    .darkMode {
+      display: block;
+    }
+
     .hero {
       display: flex;
       flex-direction: row;
@@ -770,6 +860,14 @@
     .subtitle {
       padding: 10px 35px;
       font-size: var(--fs-subtitle-portatilL);
+    }
+
+    .navContainer {
+      gap: 150px;
+    }
+
+    .navList {
+      gap: 40px;
     }
     
     .heroContent__title {
