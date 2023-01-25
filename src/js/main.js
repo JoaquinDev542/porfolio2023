@@ -27,3 +27,14 @@ menuOpenList__linkContact.addEventListener("click" , () => {
     menuOpen.classList.remove("active");
 });
 
+// Header Bg Section
+let header = document.querySelector(".header");
+
+const functionChangeBgHeader = ()=> {
+    if(document.documentElement.scrollTop >= 15) {
+        header.classList.add("addColor");
+    } else {
+        header.classList.remove("addColor");
+    }
+}
+window.addEventListener("scroll" , functionChangeBgHeader);
