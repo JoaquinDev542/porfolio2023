@@ -678,13 +678,7 @@
     }
 
     .subtitle::after {
-      position: absolute;
-      content: "";
-      bottom: -3px;
-      left: 0;
-      width: calc(100vw - 75px);
-      height: 3px;
-      background-color: var(--lm-clr-border);
+      width: calc(100vw - 73px);
     }
 
     .headerContainer {
@@ -917,6 +911,10 @@
     .subtitle {
       padding: 10px 35px;
       font-size: var(--fs-subtitle-portatilL);
+    }
+
+    .subtitle::after {
+      width: calc(1440px - 73px);
     }
 
     .navContainer {
