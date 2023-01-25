@@ -95,7 +95,6 @@
       --bg-link:var(--dm-bg-link);
       --bg-linkHover:var(--dm-bg-linkHover);
       --bg-boxs:var(--dm-bg-boxs);
-
     }
   }
   
@@ -241,16 +240,20 @@
   }
   
   .menuOpen {
-    display: none;
-  }
-
-  .menuOpen.active {
+    display: block;
     position: absolute;
-    top: 58px;
+    top: 0;
+    transform: translateY(-260px);
+    overflow: hidden;
     left: 0;
     width: 100%;
-    display: block;
     background-color: var(--lm-bg-header);
+    transition: transform .5s ;
+  }
+  
+  .menuOpen.active {
+    top: 58px;
+    transform: translateY(0);
   }
   
   .menuOpenList {
@@ -791,6 +794,10 @@
 
     .headerContainer {
       padding: var(--padding-tablet);
+    }
+
+    .menuOpen {
+      transform: translateY(-272px);
     }
 
     .menuOpen.active {
