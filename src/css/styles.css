@@ -233,10 +233,27 @@
   }
   
   .headerLink {
+    display: flex;
     font-size: 32px;
     font-family: var(--ff-title);
     text-decoration: none;
     color: var(--lm-clr-title);
+    transition: transform .2s;
+    transform: rotate(0);
+    display: inline-block;
+  }
+
+  .headerLink__span {
+    display: inline-block;
+    transition: margin-right .2s;
+  }
+
+  .headerLink:hover {
+    transform: rotate(5deg);
+  }
+
+  .headerLink:hover .headerLink__span {
+    margin-right: 5px;
   }
   
   .menuOpen {
@@ -737,13 +754,6 @@
     align-items: center;
   }
 
-  .footerContainer__logo {
-    font-size: 32px;
-    font-family: var(--ff-title);
-    text-decoration: none;
-    color: var(--lm-clr-paragraph);
-  }
-
   .footerContainerDarkMode__img {
     width: 35px;
     height: 35px;
@@ -961,9 +971,28 @@
       gap: 30px;
     }
 
+    .navList__item {
+      overflow: hidden;
+    }
+    
     .navList__link {
+      position: relative;
       color: var(--lm-clr-paragraph);
       text-decoration: none;
+    }
+
+    .navList__link::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translate(0, -50%);
+      left: calc(-100% - 30px);
+      width: 100%;
+      height:3px;
+      background-color: var(--lm-clr-border);
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity .5s , left .5s;
     }
 
     .darkMode {
@@ -1133,6 +1162,12 @@
 
   @media screen and (hover: hover) {
 
+    .navList__item:hover .navList__link::after{
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }
+
     .aboutContainerLinks__link:hover {
       color: var(--white);
       background-color: var(--lm-bg-link);
@@ -1169,3 +1204,7 @@
     }
 
   }
+
+  /* INPUT */
+  /* https://codepen.io/michellebarker/pen/gOMBPQj */
+  /* https://codepen.io/Toomean/pen/abarYv */
