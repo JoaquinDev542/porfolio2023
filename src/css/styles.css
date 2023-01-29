@@ -1054,6 +1054,30 @@
       transition: opacity .5s , left .5s;
     }
 
+    .navList__link--about.active::after {
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }
+
+    .navList__link--skills.active::after {
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }
+
+    .navList__link--projects.active::after {
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }
+
+    .navList__link--contact.active::after {
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }
+
     .darkMode {
       display: block;
     }
