@@ -445,10 +445,29 @@
     font-weight: bold;
     text-decoration: none;
     color: var(--lm-clr-paragraph);
+    transition: .5s background-color , .5s color;
   }
 
   .aboutContainerInfoContent {
     padding: 0 15px;
+    max-height: 380.34px;
+  }
+
+  .aboutContainerInfoContent--short {
+    overflow-y: scroll; 
+  }
+
+  .aboutContainerInfoContent--long {
+    display: none;
+    overflow-y: scroll; 
+  }
+
+  .aboutContainerInfoContent--long.active {
+    display: block;
+  }
+
+  .aboutContainerInfoContent--short.active {
+    display: none;
   }
 
   .aboutContainerInfoContent__arrow {
@@ -463,6 +482,7 @@
 
   .aboutContainerInfoContentList {
     padding-left: 15px;
+    margin-bottom: 0;
   }
 
   .aboutContainerInfoContentList__item {
@@ -869,6 +889,11 @@
 
     .aboutContainerInfoContent {
       padding: 0 25px;
+      max-height:338.13px;
+    }
+
+    .aboutContainerInfoContent--short {
+      overflow-y: visible; 
     }
 
     .skills {
@@ -1061,6 +1086,10 @@
       grid-area: aboutContainer;
     }
 
+    .aboutContainerInfoContent {
+      max-height:365.13px;
+    }
+
     .aboutContainerImg {
       display: grid;
       grid-template-rows: auto 53.69px;
@@ -1164,6 +1193,10 @@
       grid-template-rows: auto 56.69px;
     }
 
+    .aboutContainerInfoContent {
+      max-height:398px;
+    }
+
     .skillContainers {
       height: 600px;
     }
@@ -1196,6 +1229,11 @@
       width: 100%;
       left: 0;
       opacity: 1;
+    }
+
+    .aboutContainerInfoSubtitles__span:hover {
+      color: var(--white);
+      background-color: var(--lm-bg-link);
     }
 
     .aboutContainerLinks__link:hover {

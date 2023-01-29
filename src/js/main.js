@@ -39,6 +39,24 @@ const functionChangeBgHeader = ()=> {
 }
 window.addEventListener("scroll" , functionChangeBgHeader);
 
+// About Section Changes Time
+let aboutContainerInfoContentShort = document.querySelector(".aboutContainerInfoContent--short");
+let aboutContainerInfoContentLong = document.querySelector(".aboutContainerInfoContent--long");
+let aboutContainerInfoSubtitles__spanSecond = document.querySelector(".aboutContainerInfoSubtitles__span--seconds");
+let aboutContainerInfoSubtitles__spanMinutes = document.querySelector(".aboutContainerInfoSubtitles__span--minutes");
+
+aboutContainerInfoSubtitles__spanMinutes.addEventListener("click" , () => {
+    aboutContainerInfoContentLong.classList.add("active");
+    aboutContainerInfoContentShort.classList.add("active");
+});
+
+aboutContainerInfoSubtitles__spanSecond.addEventListener("click" , () => {
+    aboutContainerInfoContentLong.classList.remove("active");
+    aboutContainerInfoContentShort.classList.remove("active");
+});
+
+
+
 // Work Hover Projects
 let projectImgTextFirst = document.querySelector(".projectImgText--first");
 let projectImgTextSecond = document.querySelector(".projectImgText--second");
