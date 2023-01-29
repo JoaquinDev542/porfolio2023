@@ -596,16 +596,10 @@
     padding: 0 15px;
   }
 
-  .projectContentLanguages--second {
-    display: grid;
-    grid-template-columns: max-content max-content max-content;
-  }
-  
-  .projectContentLanguages__span {
-    min-width: 70px;
-    padding: 5px 10px;
-    text-align: center;
-    border: 3px solid var(--lm-clr-border);
+  .projectContentLanguages__img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
   }
 
   .projectContent__link {
@@ -1112,10 +1106,6 @@
     .projectContainer {
       gap: 50px;
     } 
-
-    .projectContentLanguages--second {
-      display: flex;
-    }
 
     .projectImg {
       height: 500px;
