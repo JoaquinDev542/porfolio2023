@@ -150,6 +150,7 @@
     font-size: var(--fs-paragraph-mobile);
     font-family: var(--ff-paragraph);
     background-color: var(--lm-bg-body);
+    /* background-color: #5594e3; */
     /* background-image:url(../../image/bg.svg); */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
@@ -325,7 +326,7 @@
     padding: var(--padding-mobile);
     display: flex;
     flex-direction: column;
-    gap: 75px;
+    /* gap: 75px; */
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -404,7 +405,7 @@
   } 
   
   .about {
-    margin-top: -75px;
+    padding-top: 75px;
   }
   
  .aboutContainerInfo {
@@ -442,6 +443,8 @@
     text-align: center;
     padding: 15px 0;
     font-weight: bold;
+    text-decoration: none;
+    color: var(--lm-clr-paragraph);
   }
 
   .aboutContainerInfoContent {
@@ -494,6 +497,10 @@
   .aboutContainer {
     display: none;
   }
+
+  .skills {
+    padding-top: 75px;
+  }
   
   .skillContainers {
     border: 3px solid var(--lm-clr-border);
@@ -536,6 +543,10 @@
   
   .skillContainerBox__span {
     display: block;
+  }
+
+  .projects {
+    padding-top: 75px;
   }
 
   .projectContainer {
@@ -645,6 +656,24 @@
     object-fit: cover;
     border-top: 3px solid var(--lm-clr-border);
     transition: transform .5s ease ;
+  }
+
+  /* .projects__more {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: 3px solid var(--lm-clr-border);
+    color: var(--lm-clr-link);
+    text-decoration: none;
+    background-color: var(--lm-bg-link);
+    transition: .5s background-color;
+    align-self: flex-end;
+    justify-self: flex-end;
+  } */
+
+  .contact {
+    padding-top: 75px;
   }
   
   .contactContainer {
@@ -822,7 +851,6 @@
 
     .main {
       padding: var(--padding-tablet);
-      gap: 100px;
     }
 
     .hero {
@@ -842,11 +870,15 @@
     }
 
     .about {
-      margin-top: -100px;
+      padding-top: 100px;
     }
 
     .aboutContainerInfoContent {
       padding: 0 25px;
+    }
+
+    .skills {
+      padding-top: 100px;
     }
 
     .skillContainers {
@@ -867,6 +899,10 @@
 
     .skillContainer__span--border {
       border-top: none
+    }
+
+    .projects {
+      padding-top: 100px;
     }
 
     .projectContainer {
@@ -916,6 +952,10 @@
     .projectImg__img--second {
       border-left: none;
       border-right: 3px solid var(--lm-clr-border);
+    }
+
+    .contact {
+      padding-top: 100px;
     }
 
     .contactContainer {
@@ -1208,3 +1248,4 @@
   /* INPUT */
   /* https://codepen.io/michellebarker/pen/gOMBPQj */
   /* https://codepen.io/Toomean/pen/abarYv */
+  /* #5594e3 */
