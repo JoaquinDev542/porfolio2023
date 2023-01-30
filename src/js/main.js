@@ -27,6 +27,23 @@ menuOpenList__linkContact.addEventListener("click" , () => {
     menuOpen.classList.remove("active");
 });
 
+
+// Header Bg Section
+let header = document.querySelector(".header");
+
+const functionChangeBgHeader = ()=> {
+    if(document.documentElement.scrollTop >= 15) {
+        header.classList.add("addColor");
+    } else {
+        header.classList.remove("addColor");
+        // navList__linkSkills.classList.remove("active");
+        // navList__linkAbout.classList.remove("active");
+        // navList__linkProjects.classList.remove("active");
+        // navList__linkContact.classList.remove("active");
+    }
+}
+window.addEventListener("scroll" , functionChangeBgHeader);
+
 // Menu Links when active state
 
 let headerLink = document.querySelector(".headerLink");
@@ -35,7 +52,6 @@ let navList__linkAbout = document.querySelector(".navList__link--about" , "::aft
 let navList__linkSkills = document.querySelector(".navList__link--skills"  , "::after");
 let navList__linkProjects = document.querySelector(".navList__link--projects"  , "::after");
 let navList__linkContact = document.querySelector(".navList__link--contact"  , "::after");
-// let footerContainerDarkMode__link = document.querySelector(".footerContainerDarkMode__link");
 
 headerLink.addEventListener('click' , ()=> {
     navList__linkAbout.classList.remove("active");
@@ -78,36 +94,6 @@ headerLinkFooter.addEventListener('click' , ()=> {
     navList__linkProjects.classList.remove("active");
     navList__linkContact.classList.remove("active");
 });
-
-// footerContainerDarkMode__link.addEventListener('click' , ()=> {
-//     navList__linkAbout.classList.remove("active");
-//     navList__linkSkills.classList.remove("active");
-//     navList__linkProjects.classList.remove("active");
-//     navList__linkContact.classList.remove("active");
-// });
-
-
-// const functionDeleteLinksActive = ()=> {
-//     if(document.documentElement.scrollTop >= .1) {
-//         navList__linkSkills.classList.remove("active");
-//         navList__linkAbout.classList.remove("active");
-//         navList__linkProjects.classList.remove("active");
-//         navList__linkContact.classList.remove("active");
-// }
-// window.addEventListener("scroll" , functionDeleteLinksActive);
-
-
-// Header Bg Section
-let header = document.querySelector(".header");
-
-const functionChangeBgHeader = ()=> {
-    if(document.documentElement.scrollTop >= 15) {
-        header.classList.add("addColor");
-    } else {
-        header.classList.remove("addColor");
-    }
-}
-window.addEventListener("scroll" , functionChangeBgHeader);
 
 // About Section Changes Time
 let aboutContainerInfoContentShort = document.querySelector(".aboutContainerInfoContent--short");
