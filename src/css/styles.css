@@ -48,11 +48,11 @@
 
     --fs-about-mobile:18px;
     --fs-about-tablet:20px;
-    --fs-about-portatilL:22px;
+    --fs-about-portatilL:24px;
 
     --fs-skills-mobile:18px;
     --fs-skills-tablet:20px;
-    --fs-skills-portatilL:22px;
+    --fs-skills-portatilL:24px;
 
     --fs-quotes-mobile: 14px;
     --fs-quotes-tablet: 16px;
@@ -939,12 +939,12 @@
       background-color: var(--lm-clr-border);
     }
 
-    .skillContainer__span {
-      font-size: var(--fs-skills-tablet);
-    }
-
     .skillContainer__span--border {
       border-top: none
+    }
+
+    .skillContainer__span {
+      font-size: var(--fs-skills-tablet);
     }
 
     .skillContainerBox__img {
