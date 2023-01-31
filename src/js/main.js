@@ -36,10 +36,6 @@ const functionChangeBgHeader = ()=> {
         header.classList.add("addColor");
     } else {
         header.classList.remove("addColor");
-        // navList__linkSkills.classList.remove("active");
-        // navList__linkAbout.classList.remove("active");
-        // navList__linkProjects.classList.remove("active");
-        // navList__linkContact.classList.remove("active");
     }
 }
 window.addEventListener("scroll" , functionChangeBgHeader);
@@ -52,6 +48,7 @@ let navList__linkAbout = document.querySelector(".navList__link--about" , "::aft
 let navList__linkSkills = document.querySelector(".navList__link--skills"  , "::after");
 let navList__linkProjects = document.querySelector(".navList__link--projects"  , "::after");
 let navList__linkContact = document.querySelector(".navList__link--contact"  , "::after");
+let footerCopyrightArrowLink = document.querySelector(".footerCopyrightArrowLink");
 
 headerLink.addEventListener('click' , ()=> {
     navList__linkAbout.classList.remove("active");
@@ -89,6 +86,13 @@ navList__linkContact.addEventListener('click' , ()=> {
 });
 
 headerLinkFooter.addEventListener('click' , ()=> {
+    navList__linkAbout.classList.remove("active");
+    navList__linkSkills.classList.remove("active");
+    navList__linkProjects.classList.remove("active");
+    navList__linkContact.classList.remove("active");
+});
+
+footerCopyrightArrowLink.addEventListener('click' , ()=> {
     navList__linkAbout.classList.remove("active");
     navList__linkSkills.classList.remove("active");
     navList__linkProjects.classList.remove("active");
