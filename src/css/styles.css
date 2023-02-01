@@ -52,7 +52,7 @@
     --fs-marquee-portatilL:1.875rem;
 
     --fs-menuLink-mobile:2rem;
-    /* --fs-menuLink-tablet:; */
+    --fs-menuLink-tablet:2.5rem;
 
     --fs-about-mobile:1.125rem;
     --fs-about-tablet:1.25rem;
@@ -280,7 +280,7 @@
     display: block;
     position: absolute;
     top: 0;
-    transform: translateY(-400px);
+    transform: translateY(-100%);
     overflow: hidden;
     left: 0;
     width: 100%;
@@ -301,7 +301,7 @@
   .menuOpenList {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     padding-left: 0;
     margin: 0 0 50px 0;
     list-style: none;
@@ -340,7 +340,6 @@
 
   .menuOpenDarkMode{
     padding: 0 0.9375rem;
-    font-size: var(--fs-menuLink-mobile);
   }
 
   .menuOpenDarkMode__link {
@@ -359,8 +358,6 @@
     color: var(--lm-clr-paragraph);
     background-color: var(--lm-bg-linkHover);
   }
-
-  /* https://fiberplane.com/?ref=lapaninja */
   
   .nav {
     display: none;
@@ -982,6 +979,27 @@
     .menuOpen.active {
       top: 3.5rem;
       height: calc(100vh - 3rem) ;
+    }
+
+    .menuOpenList__link {
+      font-size: var(--fs-menuLink-tablet);
+      padding-left: 2.1875rem;
+    }
+
+    .menuOpenCv {
+      padding: 0 2.1875rem;
+    }
+
+    .menuOpenCv__link {
+      font-size: var(--fs-menuLink-tablet);
+    }
+
+    .menuOpenDarkMode {
+      padding: 0 2.1875rem;
+    }
+
+    .menuOpenDarkMode__link {
+      font-size: var(--fs-menuLink-tablet);
     }
 
     .heroMoveTextContainer {
