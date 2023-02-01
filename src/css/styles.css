@@ -375,14 +375,14 @@
     text-orientation: sideways;
   }
 
+  .heroMoveText.remove {
+    display: block;
+  }
+
   .heroMoveText.active {
     display: none;
   }
 
-  .heroMoveText.remove {
-    display: block;
-  }
-  
   .heroMoveTextContainer {
     display: flex;
     gap: 1.25rem;
@@ -422,12 +422,12 @@
     margin: 0 auto;
   }
 
-  .main.active {
-    display: none;
-  }
-
   .main.remove {
     display: block;
+  }
+
+  .main.active {
+    display: none;
   }
 
   .hero {
@@ -917,12 +917,12 @@
     margin-top: 4.6875rem;
   }
 
-  .footer.active {
-    display: none;
-  }
-
   .footer.remove {
     display: block;
+  }
+
+  .footer.active {
+    display: none;
   }
 
   .footerContainerBox {
