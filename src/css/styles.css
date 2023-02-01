@@ -51,8 +51,8 @@
     --fs-marquee-tablet:1.625rem;
     --fs-marquee-portatilL:1.875rem;
 
-    --fs-menuLink-mobile:2rem;
-    --fs-menuLink-tablet:2.5rem;
+    --fs-menuLink-mobile:2.25rem;
+    --fs-menuLink-tablet:3rem;
 
     --fs-about-mobile:1.125rem;
     --fs-about-tablet:1.25rem;
@@ -517,6 +517,8 @@
     width: 1.875rem;
     height: 1.875rem;
     object-fit: cover;
+    animation: arrowTransition infinite 2s linear;
+    transform:translateX(0) ;
   }
   
   .heroInformation {
@@ -642,6 +644,7 @@
   }
 
   .aboutContainerLinks__link {
+    position: relative;
     padding: 0.9375rem 0;
     text-align: center;
     text-decoration: none;
@@ -649,6 +652,18 @@
     font-weight: bold;
     transition: .5s color , .5s background-color;
     font-size: var(--fs-about-mobile);
+  }
+
+  .aboutContainerLinks__link::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s opacity;
   }
 
   .aboutContainer {
@@ -758,6 +773,7 @@
   }
 
   .projectContent__link {
+    position: relative;
     margin-left: 0.9375rem;
     align-self: flex-start;
     padding: 0.9375rem 2.1875rem;
@@ -765,7 +781,20 @@
     color: var(--lm-clr-link);
     background-color: var(--lm-bg-link);
     border: 3px solid var(--lm-clr-border);
-    transition: .5s background-color;
+    transition: .5s background-color , .5s color;
+  }
+
+  .projectContent__link::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s opacity;
   }
 
   .projectImg {
@@ -863,6 +892,7 @@
   }
   
   .contactContainerContentLinks__link {
+    position: relative;
     min-width: 7.625rem;
     text-align: center;
     padding: 0.9375rem 1.5625rem;
@@ -870,7 +900,19 @@
     color: var(--lm-clr-link);
     background-color: var(--lm-bg-link);
     border: 3px solid var(--lm-clr-border);
-    transition: .5s background-color;
+    transition: .5s background-color , .5s color;
+  }
+
+  .contactContainerContentLinks__link::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s opacity;
   }
   
   .form {
@@ -1318,17 +1360,30 @@
     }
     
     .heroInformationSocialMedia__link {
+      position: relative;
       padding: 0.9375rem 0;
       text-align: center;
       text-decoration: none;
       color: var(--lm-clr-paragraph);
       border-top: 3px solid var(--lm-clr-border);
       font-weight: bold;
-      transition: .5s color , .5s background-color;
+      transition: .5s color , .5s background-color ;
     }
 
     .heroInformationSocialMedia__link--border {
       border-right: 3px solid var(--lm-clr-border);
+    }
+
+    .heroInformationSocialMedia__link::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: auto;
+      width: 100%;
+      opacity: 0;
+      transition: .5s opacity;
     }
 
     .aboutBox {
@@ -1572,8 +1627,20 @@
     }
 
     .heroInformationSocialMedia__link:hover {
-      color: var(--white);
+      color: transparent;
       background-color: var(--lm-bg-linkHover);
+    }
+
+    .heroInformationSocialMedia__link:hover::after {
+      opacity: 1;
+    }
+
+    .heroInformationSocialMedia__link--gmail:hover::after {
+      content: url(../../image/logos/email.svg);
+    }
+
+    .heroInformationSocialMedia__link--whatsapp:hover::after {
+      content: url(../../image/logos/whatsapp.svg);
     }
 
     .aboutContainerInfoSubtitles__span:hover {
@@ -1582,10 +1649,22 @@
     }
 
     .aboutContainerLinks__link:hover {
-      color: var(--white);
+      color: transparent;
       background-color: var(--lm-bg-link);
     }
-    
+
+    .aboutContainerLinks__link::after {
+      opacity: 1;
+    }
+
+    .aboutContainerLinks__link--github:hover::after {
+      content: url(../../image/logos/github.svg);
+    }
+  
+    .aboutContainerLinks__link--linkedin:hover::after {
+      content: url(../../image/logos/linkedin.svg);
+    }
+
     .projectImg:hover .projectImg__img {
       transform: scale(1.15);
     }
@@ -1597,11 +1676,44 @@
     }
 
     .projectContent__link:hover {
+      color: transparent;
       background-color: var(--lm-bg-linkHover);
     }
 
+    .projectContent__link::after {
+      opacity: 1;
+    }
+
+    .projectContent__link--first:hover::after {
+      content: url(../../image/logos/links.svg);
+
+    }
+
+    .projectContent__link--second:hover::after {
+      content: url(../../image/logos/links.svg);
+
+    }
+
+    .projectContent__link--third:hover::after {
+      content: url(../../image/logos/links.svg);
+
+    }
+
     .contactContainerContentLinks__link:hover {
+      color: transparent;
       background-color: var(--lm-bg-linkHover);
+    }
+
+    .contactContainerContentLinks__link:hover::after {
+      opacity: 1;
+    }
+
+    .contactContainerContentLinks__link--whatsapp:hover::after {
+      content: url(../../image/logos/whatsapp.svg);
+    }
+
+    .contactContainerContentLinks__link--gmail:hover::after {
+      content: url(../../image/logos/email.svg);
     }
 
     .form__send:hover {

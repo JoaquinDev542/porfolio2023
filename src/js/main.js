@@ -136,8 +136,6 @@ aboutContainerInfoSubtitles__spanSecond.addEventListener("click" , () => {
     aboutContainerInfoContentShort.classList.remove("active");
 });
 
-
-
 // Work Hover Projects
 let projectImgTextFirst = document.querySelector(".projectImgText--first");
 let projectImgTextSecond = document.querySelector(".projectImgText--second");
