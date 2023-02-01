@@ -5,26 +5,47 @@ let menuOpenList__linkAbout = document.querySelector(".menuOpenList__link--about
 let menuOpenList__linkSkills = document.querySelector(".menuOpenList__link--skills");
 let menuOpenList__linkProjects = document.querySelector(".menuOpenList__link--projects");
 let menuOpenList__linkContact = document.querySelector(".menuOpenList__link--contact");
+let heroMoveText = document.querySelector(".heroMoveText");
+let main = document.querySelector(".main");
+let footer = document.querySelector(".footer");
 
 hamburger.addEventListener("click" , ()=> {
     menuOpen.classList.toggle("active");
     menuOpen.classList.add("remove");
+    heroMoveText.classList.toggle("active");
+    main.classList.toggle("active");
+    footer.classList.toggle("active");
+    heroMoveText.classList.add("remove");
+    main.classList.add("remove");
+    footer.classList.add("remove");
 });
 
 menuOpenList__linkAbout.addEventListener("click" , () => {
     menuOpen.classList.remove("active");
+    heroMoveText.classList.remove("active");
+    main.classList.remove("active");
+    footer.classList.remove("active");
 });
 
 menuOpenList__linkSkills.addEventListener("click" , () => {
     menuOpen.classList.remove("active");
+    heroMoveText.classList.remove("active");
+    main.classList.remove("active");
+    footer.classList.remove("active");
 });
 
 menuOpenList__linkProjects.addEventListener("click" , () => {
     menuOpen.classList.remove("active");
+    heroMoveText.classList.remove("active");
+    main.classList.remove("active");
+    footer.classList.remove("active");
 });
 
 menuOpenList__linkContact.addEventListener("click" , () => {
     menuOpen.classList.remove("active");
+    heroMoveText.classList.remove("active");
+    main.classList.remove("active");
+    footer.classList.remove("active");
 });
 
 

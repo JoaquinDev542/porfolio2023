@@ -38,9 +38,10 @@
     --fs-title-tablet: 5.25rem;
     --fs-title-portatilL: 7.75rem;
 
-    --fs-subtitle-mobile: 1.5rem;
-    --fs-subtitle-tablet: 1.8125rem;
-    --fs-subtitle-portatilL: 2.125rem;
+    --fs-subtitle-mobile: 2.25rem;
+    --fs-subtitle-tablet: 2.5rem;
+    --fs-subtitle-portatil:2.75rem;
+    --fs-subtitle-portatilL: 3rem;
   
     --fs-paragraph-mobile: 1rem;
     --fs-paragraph-tablet: 1.125rem;
@@ -50,6 +51,8 @@
     --fs-marquee-tablet:1.625rem;
     --fs-marquee-portatilL:1.875rem;
 
+    --fs-menuLink-mobile:2rem;
+    /* --fs-menuLink-tablet:; */
 
     --fs-about-mobile:1.125rem;
     --fs-about-tablet:1.25rem;
@@ -277,7 +280,7 @@
     display: block;
     position: absolute;
     top: 0;
-    transform: translateY(-18.75rem);
+    transform: translateY(-400px);
     overflow: hidden;
     left: 0;
     width: 100%;
@@ -286,50 +289,79 @@
   }
   
   .menuOpen.active {
-    top: 3.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 4.0625rem;
     transform: translateY(0);
-  }
-  
-  /* .menuOpenList {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .menuOpenList__item {
-    border-bottom: 3px solid var(--lm-clr-border);
+    height: calc(100vh - 4.0625rem) ;
+    background-color: var(--lm-bg-header);
   }
 
-  .menuOpenList__item--first {
-    border-top: 3px solid var(--lm-clr-border);
+  .menuOpenList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+    margin: 0 0 50px 0;
+    list-style: none;
   }
-  
+
   .menuOpenList__link {
     display: block;
-    padding: 0.9375rem 0;
     padding-left: 0.9375rem;
+    font-family: var(--ff-title);
+    font-size: var(--fs-menuLink-mobile);
     text-decoration: none;
     color: var(--lm-clr-paragraph);
   }
-  
+
   .menuOpenCv {
-    border-bottom: 3px solid var(--lm-clr-border);
-    background-color: var(--lm-bg-boxs);
+    padding: 0 0.9375rem;
+    margin-bottom: 20px;
   }
 
   .menuOpenCv__link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 0.9375rem;
+    justify-content: center;
+    gap: 15px;
+    padding: 3px 0;
+    font-family: var(--ff-title);
+    font-size: var(--fs-menuLink-mobile);
     text-decoration: none;
-    background-color: #fff825;
+    color: var(--lm-clr-link);
+    background-color: var(--lm-bg-link);
   }
 
-  .menuOpenCv__span {
-    color: var(--lm-clr-paragraph);
-  } */
+  .menuOpenCv__img {
+    fill: var(--lm-clr-link);
+  }
 
+  .menuOpenDarkMode{
+    padding: 0 0.9375rem;
+    font-size: var(--fs-menuLink-mobile);
+  }
+
+  .menuOpenDarkMode__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 6px 0.9375rem;
+    min-height: 54px;
+  }
+
+  .menuOpenDarkMode__link {
+    font-family: var(--ff-title);
+    font-size: var(--fs-menuLink-mobile);
+    text-decoration: none;
+    color: var(--lm-clr-paragraph);
+    background-color: var(--lm-bg-linkHover);
+  }
+
+  /* https://fiberplane.com/?ref=lapaninja */
+  
   .nav {
     display: none;
   }
@@ -342,16 +374,23 @@
     position: relative;
     top: 3.625rem;
     overflow: hidden;
-    background-image: red;
     height: 100%;
     text-orientation: sideways;
+  }
+
+  .heroMoveText.active {
+    display: none;
+  }
+
+  .heroMoveText.remove {
+    display: block;
   }
   
   .heroMoveTextContainer {
     display: flex;
     gap: 1.25rem;
     height: 100%;
-    margin-top: 3px;
+    margin-top: 6px;
     padding: 0.625rem 0;
 	  white-space: nowrap;
     overflow: var(--value-hidden);
@@ -384,6 +423,14 @@
     flex-direction: column;
     max-width: 90rem;
     margin: 0 auto;
+  }
+
+  .main.active {
+    display: none;
+  }
+
+  .main.remove {
+    display: block;
   }
 
   .hero {
@@ -873,6 +920,14 @@
     margin-top: 4.6875rem;
   }
 
+  .footer.active {
+    display: none;
+  }
+
+  .footer.remove {
+    display: block;
+  }
+
   .footerContainerBox {
     max-width: 90rem;
     display: grid;
@@ -925,18 +980,13 @@
     }
 
     .menuOpen.active {
-      top: 3rem;
+      top: 3.5rem;
+      height: calc(100vh - 3rem) ;
     }
 
-    /* .menuOpenList__link {
-      padding: 0.9375rem 0;
-      padding-left: 2.1875rem;
+    .heroMoveTextContainer {
+      margin-top: 6px;
     }
-    
-    .menuOpenCv__link {
-      padding: 0 2.1875rem;
-      height: 3.1681rem;
-    } */
 
     .heroMoveTextContainer__span {
       font-size: var(--fs-marquee-tablet);
@@ -1097,6 +1147,7 @@
 
     .subtitle {
       margin-bottom: 3.125rem;
+      font-size: var(--fs-subtitle-portatil);
     }
 
     .subtitle::after {
@@ -1189,6 +1240,10 @@
 
     .heroMoveText {
       top: 3.5431rem;
+    }
+
+    .heroMoveTextContainer {
+      margin-top: 3px;
     }
 
     .heroContainer {
