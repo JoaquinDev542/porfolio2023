@@ -649,7 +649,7 @@
     background-color: var(--lm-clr-border);
   }
 
-  .aboutContainerLinks__link {
+  .aboutContainerLinksLink {
     padding: 0.9375rem 0;
     text-align: center;
     text-decoration: none;
@@ -657,6 +657,10 @@
     font-weight: bold;
     transition: .5s color , .5s background-color;
     font-size: var(--fs-about-mobile);
+  }
+
+  .aboutContainerLinksLink__img {
+    display: none;
   }
 
   .aboutContainer {
@@ -765,7 +769,7 @@
     object-fit: cover;
   }
 
-  .projectContent__link {
+  .projectContentLink {
     margin-left: 0.9375rem;
     align-self: flex-start;
     padding: 0.9375rem 2.1875rem;
@@ -773,7 +777,11 @@
     color: var(--lm-clr-link);
     background-color: var(--lm-bg-link);
     border: 3px solid var(--lm-clr-border);
-    transition: .5s background-color;
+    transition: .5s background-color , .5s color;
+  }
+
+  .projectContentLink__img {
+    display: none;
   }
 
   .projectImg {
@@ -870,7 +878,7 @@
     gap: 1.25rem;
   }
   
-  .contactContainerContentLinks__link {
+  .contactContainerContentLinksLink {
     min-width: 7.625rem;
     text-align: center;
     padding: 0.9375rem 1.5625rem;
@@ -878,7 +886,11 @@
     color: var(--lm-clr-link);
     background-color: var(--lm-bg-link);
     border: 3px solid var(--lm-clr-border);
-    transition: .5s background-color;
+    transition: .5s background-color , .5s color;
+  }
+
+  .contactContainerContentLinksLink__img {
+    display: none;
   }
   
   .form {
@@ -1054,7 +1066,7 @@
       font-size: var(--fs-about-tablet);
     }
     
-    .aboutContainerLinks__link {
+    .aboutContainerLinksLink {
       font-size: var(--fs-about-tablet);
     }
 
@@ -1128,7 +1140,7 @@
       padding: 0 1.5625rem;
     }
     
-    .projectContent__link {
+    .projectContentLink {
       margin-left: 1.5625rem;
     }
 
@@ -1328,21 +1340,49 @@
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      border-top: 3px solid var(--lm-clr-border);
     }
     
-    .heroInformationSocialMedia__link {
-      padding: 0.9375rem 0;
+    .heroInformationSocialMediaLink {
+      position: relative;
+      overflow: hidden;
       text-align: center;
-      text-decoration: none;
-      color: var(--lm-clr-paragraph);
-      border-top: 3px solid var(--lm-clr-border);
-      font-weight: bold;
-      transition: .5s color , .5s background-color;
+      height: 53px;
       font-size: var(--fs-hero-tablet);
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--lm-clr-paragraph);
+      transition: .5s color , .5s background-color;
     }
 
     .heroInformationSocialMedia__link--border {
       border-right: 3px solid var(--lm-clr-border);
+    }
+
+    .heroInformationSocialMediaLink__span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .heroInformationSocialMediaLink__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto; 
+      transform: translateY(100%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      transition: transform .2s;
     }
 
     .aboutBox {
@@ -1418,6 +1458,39 @@
       border-bottom: none;
     }
 
+    .aboutContainerLinksLink {
+      position: relative;
+      overflow: hidden;
+      padding: 0.9375rem 0;
+      height: 53.69px;
+    }
+
+    .aboutContainerLinksLink__span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .aboutContainerLinksLink__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto; 
+      transform: translateY(100%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      transition: transform .2s;
+    }
+
     .skillContainerBoxs {
       grid-template-columns: 1fr 1fr 1fr;
       gap:3.125rem;
@@ -1446,6 +1519,26 @@
       height: 4.0625rem;
     }
 
+    .projectContentLink {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .projectContentLink__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto; 
+      transform: translateY(100%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      transition: transform .2s;
+    }
+
     .contactContainer {
       height: 31.25rem;
     }
@@ -1456,6 +1549,26 @@
 
     .contactContainerContent {
       justify-content: center;
+    }
+
+    .contactContainerContentLinksLink {
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .contactContainerContentLinksLink__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto; 
+      transform: translateY(100%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      transition: transform .2s;
     }
 
   }
@@ -1514,7 +1627,8 @@
       height: 60.58px;
     }
 
-    .heroInformationSocialMedia__link {
+    .heroInformationSocialMediaLink {
+      height: 57.58px;
       font-size: var(--fs-hero-portatilL);
     }
 
@@ -1538,7 +1652,7 @@
       font-size: var(--fs-about-portatilL);
     }
     
-    .aboutContainerLinks__link {
+    .aboutContainerLinksLink {
       font-size: var(--fs-about-portatilL);
       height: 3.5431rem;
     }
@@ -1589,9 +1703,13 @@
       background-color: var(--lm-bg-linkHover);
     }
 
-    .heroInformationSocialMedia__link:hover {
-      color: var(--white);
+    .heroInformationSocialMediaLink:hover {
+      color: transparent;
       background-color: var(--lm-bg-linkHover);
+    }
+
+    .heroInformationSocialMediaLink:hover .heroInformationSocialMediaLink__img {
+      transform: translateY(0);
     }
 
     .aboutContainerInfoSubtitles__span:hover {
@@ -1599,9 +1717,13 @@
       background-color: var(--lm-bg-link);
     }
 
-    .aboutContainerLinks__link:hover {
-      color: var(--white);
+    .aboutContainerLinksLink:hover {
+      color: transparent;
       background-color: var(--lm-bg-link);
+    }
+
+    .aboutContainerLinksLink:hover .aboutContainerLinksLink__img {
+      transform: translateY(0);
     }
     
     .projectImg:hover .projectImg__img {
@@ -1614,12 +1736,22 @@
       background-color: var(--lm-bg-link);
     }
 
-    .projectContent__link:hover {
+    .projectContentLink:hover {
+      color: transparent;
       background-color: var(--lm-bg-linkHover);
     }
 
-    .contactContainerContentLinks__link:hover {
+    .projectContentLink:hover .projectContentLink__img {
+      transform: translateY(0);
+    }
+    
+    .contactContainerContentLinksLink:hover {
+      color: transparent;
       background-color: var(--lm-bg-linkHover);
+    }
+
+    .contactContainerContentLinksLink:hover .contactContainerContentLinksLink__img {
+      transform: translateY(0);
     }
 
     .form__send:hover {
