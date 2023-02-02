@@ -51,8 +51,13 @@
     --fs-marquee-tablet:1.625rem;
     --fs-marquee-portatilL:1.875rem;
 
-    --fs-menuLink-mobile:2rem;
-    --fs-menuLink-tablet:2.5rem;
+    --fs-menuLink-mobile:2.25rem;
+    --fs-menuLink-tablet:3rem;
+
+    --fs-hero-mobile:1.125rem;
+    --fs-hero-tablet:1.25rem;
+    --fs-hero-portatilL:1.5rem;
+
 
     --fs-about-mobile:1.125rem;
     --fs-about-tablet:1.25rem;
@@ -511,12 +516,15 @@
     width: max-content;
     padding: 9px 0.9375rem;
     transition: .5s background-color;
+    font-size: var(--fs-hero-mobile);
   }
 
   .heroContentLink__img {
     width: 1.875rem;
     height: 1.875rem;
     object-fit: cover;
+    animation: arrowTransition infinite 2s linear;
+    transform: translateX(0);
   }
   
   .heroInformation {
@@ -1022,6 +1030,10 @@
       top: 3rem;
     }
 
+    .heroContentLink {
+      font-size: var(--fs-hero-tablet);
+    }
+
     .about {
       padding-top: 6.25rem;
     }
@@ -1297,7 +1309,8 @@
       padding: 9px 0.9375rem;
       border: none;
       border-top: 3px solid var(--lm-clr-border);
-      height: 53.69px;
+      height: 56px;
+      font-size: var(--fs-hero-portatilL);
     }
 
     .heroInformation {
@@ -1325,6 +1338,7 @@
       border-top: 3px solid var(--lm-clr-border);
       font-weight: bold;
       transition: .5s color , .5s background-color;
+      font-size: var(--fs-hero-tablet);
     }
 
     .heroInformationSocialMedia__link--border {
@@ -1497,7 +1511,11 @@
     }
 
     .heroContentLink {
-      height: 58.3px;
+      height: 60.58px;
+    }
+
+    .heroInformationSocialMedia__link {
+      font-size: var(--fs-hero-portatilL);
     }
 
     .aboutContainerImg {
