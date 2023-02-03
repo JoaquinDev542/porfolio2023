@@ -206,7 +206,11 @@
   h5 {
     font-family: var(--ff-title);
   }
-  
+
+  .main {
+    overflow: hidden;
+  }
+
   .subtitle {
     position: relative;
     display: inline-block;
@@ -219,13 +223,14 @@
     -webkit-text-stroke-color: var(--lm-clr-title);
     -webkit-text-fill-color: transparent; */
   }
-  
+
   .subtitle::after {
     position: absolute;
     content: "";
     bottom: -3px;
-    left: 0;
-    width: calc(100vw - 2.0625rem);
+    left: -3px;
+    width: 100%;
+    width: calc(100vw - 36px);
     height: 3px;
     background-color: var(--lm-clr-border);
     max-width: 90rem;
@@ -908,6 +913,7 @@
     border: none;
     border-bottom: 3px solid var(--lm-clr-border);
     outline: none;
+    caret-color: var(--lm-bg-link);
   }
   
   .textarea {
@@ -917,6 +923,7 @@
     border: none;
     outline: none;
     resize: vertical;
+    caret-color: var(--lm-bg-link);
   }
   
   .form__send {
@@ -1718,12 +1725,12 @@
 
     .aboutContainerInfoSubtitles__span:hover {
       color: var(--white);
-      background-color: var(--lm-bg-link);
+      background-color: var(--lm-bg-linkHover);
     }
 
     .aboutContainerLinksLink:hover {
       color: transparent;
-      background-color: var(--lm-bg-link);
+      background-color: var(--lm-bg-linkHover);
     }
 
     .aboutContainerLinksLink:hover .aboutContainerLinksLink__img {
@@ -1763,7 +1770,7 @@
     }
     
     .footerCopyrightArrowLink:hover {
-      background-color: var(--lm-bg-link);
+      background-color: var(--lm-bg-linkHover);
     }
 
     .footerCopyrightArrowLink__img:hover {
