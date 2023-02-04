@@ -219,6 +219,7 @@
     border: 3px solid var(--lm-clr-border);
     font-size: var(--fs-subtitle-mobile);
     background-color: var(--lm-bg-body);
+    background-color: var(--lm-bg-boxs);
     /* -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: var(--lm-clr-title);
     -webkit-text-fill-color: transparent; */
@@ -581,27 +582,44 @@
     transition: .5s background-color , .5s color;
   }
 
+  .aboutContainerInfoSubtitles__span--seconds {
+    background-color: var(--lm-bg-boxs);
+  }
+
+  .aboutContainerInfoSubtitles__span--seconds.active {
+    background-color: transparent;
+  }
+
+  .aboutContainerInfoSubtitles__span--minutes.active {
+    background-color: var(--lm-bg-boxs);
+  }
+
   .aboutContainerInfoContent {
     padding: 0 0.9375rem;
     max-height: 23.7712rem;
+    transition: .5s background-color;
   }
 
   .aboutContainerInfoContent--short {
     overflow-y: scroll; 
     overflow: hidden;
+    background-color: var(--lm-bg-boxs);
   }
 
   .aboutContainerInfoContent--long {
     display: none;
     overflow-y: scroll; 
+    background-color: transparent;
   }
 
   .aboutContainerInfoContent--long.active {
     display: block;
+    background-color: var(--lm-bg-boxs);
   }
 
   .aboutContainerInfoContent--short.active {
     display: none;
+    background-color: transparent;
   }
 
   .aboutContainerInfoContent__arrow {
@@ -1441,14 +1459,14 @@
       text-align: center;
       font-weight: bold;
       text-decoration: none;
-      color: var(--lm-clr-paragraph);
-      background-color: var(--lm-bg-boxs);
+      color: var(--lm-clr-link);
+      background-color: var(--lm-bg-link);
       font-size: var(--fs-about-tablet);
+      transition: .5s background-color;
     }
 
     .aboutContainerCv__span {
       display: block;
-      color: var(--lm-clr-paragraph);
       font-weight: bold;
     }
 
@@ -1456,6 +1474,7 @@
       display: block;
       animation: cvTransition infinite 1s linear;
       transform: scale(1);
+      fill: var(--lm-clr-link);
     }
 
     @keyframes cvTransition {
@@ -1741,6 +1760,10 @@
       background-color: var(--lm-bg-linkHover);
     }
 
+    .aboutContainerCv:hover {
+      background-color: var(--lm-bg-linkHover);
+    }
+    
     .aboutContainerLinksLink:hover .aboutContainerLinksLink__img {
       transform: translateY(0);
     }

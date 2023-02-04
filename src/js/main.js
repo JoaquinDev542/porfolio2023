@@ -129,11 +129,15 @@ let aboutContainerInfoSubtitles__spanMinutes = document.querySelector(".aboutCon
 aboutContainerInfoSubtitles__spanMinutes.addEventListener("click" , () => {
     aboutContainerInfoContentLong.classList.add("active");
     aboutContainerInfoContentShort.classList.add("active");
+    aboutContainerInfoSubtitles__spanSecond.classList.add("active");
+    aboutContainerInfoSubtitles__spanMinutes.classList.add("active");
 });
 
 aboutContainerInfoSubtitles__spanSecond.addEventListener("click" , () => {
     aboutContainerInfoContentLong.classList.remove("active");
     aboutContainerInfoContentShort.classList.remove("active");
+    aboutContainerInfoSubtitles__spanSecond.classList.remove("active");
+    aboutContainerInfoSubtitles__spanMinutes.classList.remove("active");
 });
 
 
