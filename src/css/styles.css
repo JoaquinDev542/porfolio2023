@@ -36,7 +36,7 @@
       --dm-bg-about:; */
     --fs-title-mobile: 3.625rem;
     --fs-title-tablet: 5.25rem;
-    --fs-title-portatilL: 7.75rem;
+    --fs-title-portatilL: 7rem;
 
     --fs-subtitle-mobile: 2.25rem;
     --fs-subtitle-tablet: 2.5rem;
@@ -162,7 +162,7 @@
   ::after {
     box-sizing: border-box;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -1343,6 +1343,14 @@
     .heroInformation {
       position: relative;
       border-left: 3px solid var(--lm-clr-border);
+    }
+
+    .heroInformationContent {
+      background-color: #e5e5f7;
+      opacity: 0.8;
+      background-image: linear-gradient(to right, #444cf7, #444cf7 5px, #e5e5f7 5px, #e5e5f7 );
+      background-size: 10px 100%;
+      background-color: red;
     }
 
     .heroInformationSocialMedia {
