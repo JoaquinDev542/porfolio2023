@@ -90,11 +90,13 @@
     --lm-clr-link: #f5f5f5;
     --lm-bg-body: #fdfbf1;
     --lm-bg-header: #fff;
+    --lm-bg-link: #3a3ab1;
+    --lm-bg-link: #2458FF;
+    --lm-bg-linkHover: #4343ce;
+    /* --lm-bg-boxs:#fa9b3c; */
+    --lm-bg-boxs:#fdd159;
     --lm-bg-link: #20204d;
     --lm-bg-linkHover: #393989;
-    --lm-bg-boxs:#fff825;
-    --lm-bg-boxs:#fdd159;
-
     --white:#fff;
     /* --dm-clr-title:;
     --dm-clr-paragraph:;
@@ -932,6 +934,11 @@
     border-bottom: 3px solid var(--lm-clr-border);
     outline: none;
     caret-color: var(--lm-bg-link);
+    background-color: var(--lm-bg-boxs);
+  }
+  
+  .input::placeholder {
+    color: var(--lm-clr-paragraph);
   }
   
   .textarea {
@@ -942,8 +949,13 @@
     outline: none;
     resize: vertical;
     caret-color: var(--lm-bg-link);
+    background-color: var(--lm-bg-boxs);
   }
   
+  .textarea::placeholder {
+    color: var(--lm-clr-paragraph);
+  }
+
   .form__send {
     position: absolute;
     bottom: 0;
