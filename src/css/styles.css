@@ -179,9 +179,12 @@
     /* background-color: #5887ff; */
     /* background-color: #e06b39; */
     /* background-color: #161831; */
-    background-image: radial-gradient(circle, #393989 20%, transparent 10%), radial-gradient(circle, #393989 20%, transparent 10%);
+    /* background-image: radial-gradient(circle, #393989 20%, transparent 10%), radial-gradient(circle, #393989 20%, transparent 10%);
     background-size: 10px 10px;
-    background-position: 0 0, 0 0;
+    background-position: 0 0, 0 0; */
+
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
   }
 
   body::-webkit-scrollbar {
@@ -220,7 +223,7 @@
     padding: 0.625rem 0.9375rem;
     border: 3px solid var(--lm-clr-border);
     font-size: var(--fs-subtitle-mobile);
-    background-color: var(--lm-bg-body);
+    /* background-color: var(--lm-bg-body); */
     background-color: var(--lm-bg-boxs);
     /* -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: var(--lm-clr-title);
@@ -1367,20 +1370,16 @@
     }
 
     .heroInformation {
-      display: block;
-    }
-
-    .heroInformation {
+      display: grid;
+      grid-template-rows: auto 53px;
       position: relative;
       border-left: 3px solid var(--lm-clr-border);
     }
 
     .heroInformationContent {
-      background-color: #e5e5f7;
       opacity: 0.8;
-      background-image: linear-gradient(to right, #444cf7, #444cf7 5px, #e5e5f7 5px, #e5e5f7 );
-      background-size: 10px 100%;
-      background-color: red;
+      background-image: radial-gradient(#444cf7 0.8px, #e5e5f7 0.8px);
+      background-size: 16px 16px;
     }
 
     .heroInformationSocialMedia {
@@ -1675,6 +1674,10 @@
 
     .heroContentLink {
       height: 3.7862rem;
+    }
+
+    .heroInformation {
+      grid-template-rows: auto 3.5987rem;
     }
 
     .heroInformationSocialMediaLink {
