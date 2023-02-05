@@ -967,11 +967,14 @@
     text-align: center;
     padding: 0.9375rem 2.1875rem;
     text-decoration: none;
+    outline: none;
+    border: none;
     border-top: 3px solid var(--lm-clr-border);
     border-left: 3px solid var(--lm-clr-border);
     color: var(--lm-clr-link);
     background-color: var(--lm-bg-link);
     transition: .5s background-color;
+    cursor: pointer;
   }
   
   .footer {
