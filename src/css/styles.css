@@ -369,8 +369,12 @@
     font-family: var(--ff-title);
     font-size: var(--fs-menuLink-mobile);
     text-decoration: none;
-    color: var(--lm-clr-paragraph);
+    color: var(--lm-clr-link);
     background-color: var(--lm-bg-linkHover);
+  }
+
+  .menuOpenDarkMode__img {
+    fill: var(--lm-clr-link);
   }
   
   .nav {

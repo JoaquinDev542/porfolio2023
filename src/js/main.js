@@ -1,3 +1,21 @@
+// Scroll Reveal
+ScrollReveal({
+    distance: '50px',
+    duration: 1000 ,
+    delay: 100
+})
+
+ScrollReveal().reveal('.header', {origin: 'top'});
+ScrollReveal().reveal('.heroMoveText', {origin: 'top'} , {delay: 200});
+ScrollReveal().reveal('.heroContainer');
+ScrollReveal().reveal('.subtitle' , {origin: 'left'});
+ScrollReveal().reveal('.aboutBox');
+ScrollReveal().reveal('.skillContainers');
+ScrollReveal().reveal('.project--first' , {origin: 'left'} ,  {delay: 200} );
+ScrollReveal().reveal('.project--second', {origin: 'right'} , {delay: 300});
+ScrollReveal().reveal('.project--third' , {origin: 'left'}  , {delay: 400} );
+ScrollReveal().reveal('.contactContainer');
+
 // Menu Section
 let hamburger = document.querySelector(".hamburger");
 let menuOpen = document.querySelector(".menuOpen");
