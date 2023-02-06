@@ -520,6 +520,7 @@
   .heroContent__blockquoteParagraph {
     margin: 0;
     font-size: var(--fs-quotes-mobile);
+    /* font-family: monospace; */
   }
 
   .heroContent__span {
