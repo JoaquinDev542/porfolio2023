@@ -95,6 +95,7 @@
     --lm-bg-linkHover: #4343ce;
     /* --lm-bg-boxs:#fa9b3c; */
     --lm-bg-boxs:#fdd159;
+    --lm-bg-boxsHover:#f8c63b;
     --lm-bg-link: #20204d;
     --lm-bg-linkHover: #393989;
     --white:#fff;
@@ -514,7 +515,8 @@
   }
 
   .heroContent__span {
-    color: red;
+    font-weight: bold;
+    text-decoration: underline;
   }
 
   .heroContentLink {
@@ -942,6 +944,11 @@
     outline: none;
     caret-color: var(--lm-bg-link);
     background-color: var(--lm-bg-boxs);
+    transition: .5s background-color;
+  }
+
+  .input:focus {
+    background-color: var(--lm-bg-boxsHover);
   }
   
   .input::placeholder {
@@ -957,6 +964,11 @@
     resize: vertical;
     caret-color: var(--lm-bg-link);
     background-color: var(--lm-bg-boxs);
+    transition: .5s background-color;
+  }
+
+  .textarea:focus {
+    background-color: var(--lm-bg-boxsHover);
   }
   
   .textarea::placeholder {
