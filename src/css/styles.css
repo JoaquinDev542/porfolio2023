@@ -520,7 +520,6 @@
   .heroContent__blockquoteParagraph {
     margin: 0;
     font-size: var(--fs-quotes-mobile);
-    /* font-family: monospace; */
   }
 
   .heroContent__span {
@@ -663,8 +662,12 @@
 
   .aboutContainerInfoContent__span {
     display: block;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 0.625rem;
+  }
+
+  .aboutContainerInfoContent__paragraphSpan {
+    font-weight: 500;
   }
 
   .aboutContainerInfoContentList {
