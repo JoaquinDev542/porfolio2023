@@ -200,3 +200,31 @@ projectContentLinkThird.addEventListener("mouseout" , ()=> {
     projectImgTextThird.classList.remove("active");
     projectImg__imgThird.classList.remove("active");
 });
+
+// DarkMode
+let darkModeContainer = document.querySelector(".darkModeContainer");
+let menuOpenDarkMode__link = document.querySelector(".menuOpenDarkMode__link");
+let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+const setColorScheme = e =>  {
+    if (e.matches) {
+        darkModeContainer.addEventListener("click" , ()=> {
+            document.documentElement.classList.toggle("whiteMode");
+        });
+
+        menuOpenDarkMode__link.addEventListener("click" , ()=> {
+            document.documentElement.classList.toggle("whiteMode");
+        });
+
+    } else {
+        darkModeContainer.addEventListener("click" , ()=> {
+            document.documentElement.classList.toggle("darkMode");
+        });
+
+        menuOpenDarkMode__link.addEventListener("click" , ()=> {
+            document.documentElement.classList.toggle("darkMode");
+        });
+    }
+}
+
+setColorScheme(colorSchemeQueryList);
+colorSchemeQueryList.addEventListener('change', setColorScheme);
