@@ -313,6 +313,7 @@
     transform: translateY(0);
     height: calc(100vh - 4.0625rem) ;
     background-color: var(--bg-header);
+    transition: .5s background-color;
   }
 
   .menuOpenList {
@@ -415,6 +416,7 @@
     overflow: var(--value-hidden);
     background-color: var(--bg-linkHover);
     border-bottom: 3px solid var(--clr-border);
+    transition: .5s background-color;
   }
 
   .heroMoveTextContainer__span {
@@ -463,6 +465,7 @@
     border-radius: 5px;
     margin-top: 3.0238rem;
     background-color: var(--bg-body);
+    transition: .5s background-color;
   }
 
   .heroContent {
@@ -559,6 +562,7 @@
     border: 3px solid var(--clr-border);
     border-radius: 5px;
     background-color: var(--bg-body);
+    transition: .5s background-color;
   }
 
   .aboutContainerInfoTitlesContainer {
@@ -722,6 +726,7 @@
     border: 3px solid var(--clr-border);
     border-radius: 5px;
     background-color: var(--bg-body);
+    transition: .5s background-color;
   }
 
   .skillContainer__span {
@@ -787,6 +792,7 @@
     border: 3px solid var(--clr-border);
     border-radius: 5px;
     background-color: var(--bg-body);
+    transition: .5s background-color;
   }
   
   .project::after {
@@ -925,6 +931,7 @@
     border-radius: 5px;
     padding: 1.5625rem 0.9375rem;
     background-color: var(--bg-body);
+    transition: .5s background-color;
   }
   
   .contactContainer::after {
@@ -1067,6 +1074,7 @@
     border: 3px solid var(--clr-border);
     border-radius: 5px;
     background-color: var(--bg-body);
+    transition: .5s background-color;
   }
   
   .footerCopyright__span {
