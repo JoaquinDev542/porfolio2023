@@ -64,22 +64,24 @@
     --lm-clr-base:#f5f5f5;
     --lm-bg-selection:#444df77b;
     --lm-clr-marquee:#0a0a1c;
+    --lm-fill-darkmode:red;
 
-    --dm-clr-title: #eeeeee;
-    --dm-clr-paragraph:#bdbdbd;
-    --dm-clr-border: #626262;
-    --dm-bg-bodyClass:#252525;
-    --dm-bg-body:#494949;
-    --dm-bg-boxs:#252525;
-    --dm-bg-boxsHover:#494949;
-    --dm-bg-header: #252525;
-    --dm-bg-linkHover:#494949;
+    --dm-clr-title: #f1f0ea;
+    --dm-clr-paragraph:#f1f0ea;
+    --dm-clr-border: #f1f0ea;
+    --dm-bg-bodyClass:#151515;
+    --dm-bg-body:#191919;
+    --dm-bg-boxs:#151515;
+    --dm-bg-boxsHover:#202020;
+    --dm-bg-header: #151515;
+    --dm-bg-linkHover:#181246;
+    --dm-bg-linkHover:#181246;
     /* --dm-clr-linkHover:#0a0a1c; */
-    --dm-clr-link:#eeeeee ;
-    --dm-bg-link:#252525;
-    --dm-clr-base:#eeeeee;
-    --dm-bg-selection:#444df77b;
-    --dm-clr-marquee:#eeeeee;
+    --dm-clr-link:#f1f0ea ;
+    --dm-bg-link:#181246;
+    --dm-clr-base:#f1f0ea;
+    --dm-bg-selection:#181246;
+    --dm-clr-marquee:#f1f0ea;
 
   }
   
@@ -100,6 +102,7 @@
     --clr-base:var(--dm-clr-base);
     --bg-selection: var(--dm-bg-selection);
     --clr-marquee:var(--dm-clr-marquee);
+    --fill-darkmode:var(--dm-fill-darkmode);
     }
   }
   
@@ -120,6 +123,7 @@
       --clr-base:var(--lm-clr-base);
       --bg-selection: var(--lm-bg-selection);
       --clr-marquee:var(--lm-clr-marquee);
+      --fill-darkmode:var(--lm-fill-darkmode);
     }
   }
   
@@ -139,6 +143,7 @@
     --clr-base:var(--lm-clr-base);
     --bg-selection: var(--lm-bg-selection);
     --clr-marquee:var(--lm-clr-marquee);
+    --fill-darkmode:var(--lm-fill-darkmode);
   }
   
   .darkMode {
@@ -157,6 +162,7 @@
     --clr-base:var(--dm-clr-base);
     --bg-selection: var(--dm-bg-selection);
     --clr-marquee:var(--dm-clr-marquee);
+    --fill-darkmode:var(--dm-fill-darkmode);
   }
   
   *,
@@ -1323,7 +1329,7 @@
     .navList__link {
       position: relative;
       font-family: var(--ff-title);
-      color: var(--clr-paragraph);
+      color: var(--clr-title);
       text-decoration: none;
     }
 
@@ -1367,6 +1373,10 @@
    
     .darkMode {
       display: block;
+    }
+
+    .darkMode__img {
+      fill: var(--fill-darkmode);
     }
 
     .hero {
