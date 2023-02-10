@@ -61,27 +61,28 @@
     --lm-bg-boxsHover:#e1e1e1;
     --lm-clr-link: #f5f5f5;
     --lm-bg-link: #0a0a1c;
+    --lm-bg-link: #1a1a48;
     --lm-clr-base:#f5f5f5;
     --lm-bg-selection:#444df77b;
     --lm-clr-marquee:#0a0a1c;
-    --lm-fill-darkmode:red;
+    --lm-fill:#000;
 
     --dm-clr-title: #f1f0ea;
     --dm-clr-paragraph:#f1f0ea;
     --dm-clr-border: #f1f0ea;
     --dm-bg-bodyClass:#151515;
-    --dm-bg-body:#191919;
+    --dm-bg-body:#232323;
     --dm-bg-boxs:#151515;
-    --dm-bg-boxsHover:#202020;
+    --dm-bg-boxsHover:#232323;
     --dm-bg-header: #151515;
-    --dm-bg-linkHover:#181246;
-    --dm-bg-linkHover:#181246;
-    /* --dm-clr-linkHover:#0a0a1c; */
+    --dm-bg-linkHover:#261a79;
+    --dm-clr-linkHover:#f1f0ea;
     --dm-clr-link:#f1f0ea ;
     --dm-bg-link:#181246;
     --dm-clr-base:#f1f0ea;
     --dm-bg-selection:#181246;
     --dm-clr-marquee:#f1f0ea;
+    --dm-fill:#f5f5f5;
 
   }
   
@@ -102,7 +103,7 @@
     --clr-base:var(--dm-clr-base);
     --bg-selection: var(--dm-bg-selection);
     --clr-marquee:var(--dm-clr-marquee);
-    --fill-darkmode:var(--dm-fill-darkmode);
+    --fill:var(--dm-fill);
     }
   }
   
@@ -123,7 +124,7 @@
       --clr-base:var(--lm-clr-base);
       --bg-selection: var(--lm-bg-selection);
       --clr-marquee:var(--lm-clr-marquee);
-      --fill-darkmode:var(--lm-fill-darkmode);
+      --fill:var(--lm-fill);
     }
   }
   
@@ -143,7 +144,7 @@
     --clr-base:var(--lm-clr-base);
     --bg-selection: var(--lm-bg-selection);
     --clr-marquee:var(--lm-clr-marquee);
-    --fill-darkmode:var(--lm-fill-darkmode);
+    --fill:var(--lm-fill);
   }
   
   .darkMode {
@@ -162,7 +163,7 @@
     --clr-base:var(--dm-clr-base);
     --bg-selection: var(--dm-bg-selection);
     --clr-marquee:var(--dm-clr-marquee);
-    --fill-darkmode:var(--dm-fill-darkmode);
+    --fill:var(--dm-fill);
   }
   
   *,
@@ -544,6 +545,7 @@
     object-fit: cover;
     animation: arrowTransition infinite 2s linear;
     transform: translateX(0);
+    /* fill: var(--fill); */
   }
   
   .heroInformation {
@@ -642,6 +644,10 @@
     display: inline-block;
     animation: arrowTransition infinite 2s linear;
     transform:translateX(0) ;
+  }
+
+  .aboutContainerInfoContent__arrowPath {
+    fill: var(--fill);
   }
 
   @keyframes arrowTransition {
@@ -743,6 +749,14 @@
     width: 3.125rem;
     height: 3.125rem;
     margin: 0 auto;
+  }
+
+  .skillContainerBox__img--github {
+    fill: var(--fill);
+  }
+
+  .skillContainerBox__img--notion {
+    fill: var(--fill);
   }
   
   .skillContainerBoxs {
@@ -1072,6 +1086,8 @@
   .footerCopyrightArrowLink__img {
     display: block;
     transition: .5s fill;
+    /* fill: var(--fill); */
+    /* fill: var(); */
   }
 
   @media screen and (min-width:48rem) {
@@ -1490,6 +1506,7 @@
       align-items: center;
       justify-content: center; 
       transition: transform .2s;
+      fill: var(--fill);
     }
 
     .aboutBox {
@@ -1603,6 +1620,7 @@
       align-items: center;
       justify-content: center; 
       transition: transform .2s;
+      fill: var(--fill);
     }
 
     .skillContainerBoxs {
@@ -1651,6 +1669,7 @@
       align-items: center;
       justify-content: center; 
       transition: transform .2s;
+      fill: var(--fill);
     }
 
     .contactContainer {
@@ -1683,6 +1702,7 @@
       align-items: center;
       justify-content: center; 
       transition: transform .2s;
+      fill: var(--fill);
     }
 
   }
@@ -1860,7 +1880,6 @@
     .projectImg:hover .projectImgText{
       opacity: 1;
       color: var(--clr-base);
-      /* color: red; */
       background-color: var(--bg-link);
     }
 
