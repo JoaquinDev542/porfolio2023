@@ -397,9 +397,9 @@
     text-orientation: sideways;
   }
 
-  .heroMoveText.remove {
+  /* .heroMoveText.remove {
     display: block;
-  }
+  } */
 
   .heroMoveText.active {
     display: none;
@@ -444,9 +444,9 @@
     margin: 0 auto;
   }
 
-  .main.remove {
+  /* .main.remove {
     display: block;
-  }
+  } */
 
   .main.active {
     display: none;
@@ -1062,9 +1062,9 @@
     margin-top: 4.6875rem;
   }
 
-  .footer.remove {
+  /* .footer.remove {
     display: block;
-  }
+  } */
 
   .footer.active {
     display: none;
@@ -1326,9 +1326,9 @@
       width: calc(100vw - 4.875rem);
     }
 
-    .menuOpen.remove {
+    /* .menuOpen.remove {
       display: none;
-    }
+    } */
 
     .menuOpen {
       display: none;
