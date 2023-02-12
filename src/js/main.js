@@ -46,11 +46,11 @@ window.addEventListener("scroll", functionChangeBgHeader);
 let headerLink = document.querySelector(".headerLink");
 let headerLinkFooter = document.querySelector(".headerLink--footer");
 let navLinks = document.querySelectorAll('.navList__link');
-let footerCopyrightArrowLink = document.querySelector(".footerCopyrightArrowLink");
+let ArrowLink = document.querySelector(".ArrowLink");
 
 headerLink.addEventListener('click', removeActiveClass);
 headerLinkFooter.addEventListener('click', removeActiveClass);
-footerCopyrightArrowLink.addEventListener('click', removeActiveClass);
+ArrowLink.addEventListener('click', removeActiveClass);
 
 navLinks.forEach(link => link.addEventListener('click', addActiveClass));
 

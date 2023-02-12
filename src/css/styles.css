@@ -1094,7 +1094,7 @@
     font-size: 0.875rem;
  }
 
-  .footerCopyrightArrowLink {
+  .ArrowLink {
     border-left: 3px solid var(--clr-border);
     transition: .5s background-color , .5s color;
     background-color: var(--bg-link);
@@ -1915,7 +1915,7 @@
       color: var(--clr-linkHover);
     }
     
-    .footerCopyrightArrowLink:hover {
+    .ArrowLink:hover {
       background-color: var(--bg-linkHover);
       color: var(--clr-linkHover);
     }
