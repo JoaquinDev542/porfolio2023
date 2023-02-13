@@ -346,7 +346,7 @@
     font-size: var(--fs-paragraph-mobile);
     font-family: var(--ff-paragraph);
     background-color: var(--bg-bodyClass);
-    font-display: swap;
+    /* font-display: swap; */
     color: var(--clr-paragraph);
     transition: .5s color;
   }
