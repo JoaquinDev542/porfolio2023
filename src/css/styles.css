@@ -1770,9 +1770,8 @@
     }
 
     .aboutContainerImg__img {
-      min-height: 30.0081rem;
-      min-width: 29.625rem;
-      height: 100%;
+      height: 474px;
+      max-width: 100%;
       object-fit: cover;
       border-bottom: 3px solid var(--clr-border);
     }
@@ -2004,6 +2003,14 @@
 
     .aboutContainerImg {
       grid-template-rows: auto 3.5431rem;
+    }
+
+    .aboutContainerImg__img {
+      height: 549.19px;
+      width: 42.625rem;
+      height: 100%;
+      object-fit: cover;
+      border-bottom: 3px solid var(--clr-border);
     }
 
     .aboutContainerInfoContent {
