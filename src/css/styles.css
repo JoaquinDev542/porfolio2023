@@ -378,6 +378,57 @@
     color: var(--clr-title);
   }
 
+  .spinnerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-bodyClass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 12px;
+    display: block;
+    margin: auto;
+    position: relative;
+    border-radius: 4px;
+    color: var(--fill);
+    background: currentColor;
+    box-sizing: border-box;
+    animation: animloader 0.6s 0.3s ease infinite alternate;
+  }
+  .spinner::after,
+  .spinner::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 20px;
+    height: 12px;
+    background: currentColor;
+    position: absolute;
+    border-radius: 4px;
+    top: 0;
+    right: 110%;
+    animation: animloader  0.6s ease infinite alternate;
+  }
+  .spinner::after {
+    left: 110%;
+    right: auto;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      width: 20px;
+    }
+    100% {
+      width: 48px;
+    }
+  }
   .main {
     overflow: hidden;
   }
@@ -2094,39 +2145,3 @@
     }
 
   }
-
-
-  /* LOADING SECTION
-    <div class="spinner"></div>
-
-<style>
-.spinner {
-   width: 88px;
-   height: 88px;
-   border-radius: 50%;
-   color: #393989;
-   background: linear-gradient(currentColor 0 0) center/100% 7px,
-          linear-gradient(currentColor 0 0) center/7px 100%,
-          radial-gradient(farthest-side,#0000 calc(100% - 10.6px),currentColor calc(100% - 8.8px)),
-          radial-gradient(circle 10.6px,currentColor 94%,#0000 0);
-   background-repeat: no-repeat;
-   animation: spinner-mu2ebf 1s infinite linear;
-   position: relative;
-}
-
-.spinner::before {
-   content: "";
-   position: absolute;
-   inset: 0;
-   border-radius: inherit;
-   background: inherit;
-   transform: rotate(45deg);
-}
-
-@keyframes spinner-mu2ebf {
-   to {
-      transform: rotate(.5turn);
-   }
-}
-</style>
-  */

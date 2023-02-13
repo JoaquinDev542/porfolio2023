@@ -1,5 +1,9 @@
-// Scroll Reveal
-const sr = ScrollReveal({
+setTimeout(function() {
+  document.querySelector('.spinnerContainer').style.display = "none";
+  document.getElementById('content').style.display = "block";
+
+  // Scroll Reveal
+  const sr = ScrollReveal({
     distance: '50px',
     duration: 1000,
     delay: 100
@@ -15,6 +19,7 @@ const sr = ScrollReveal({
     sr.reveal('.project--second', { origin: 'right', delay: 300 });
     sr.reveal('.project--third', { origin: 'left', delay: 400 });
     sr.reveal('.contactContainer');
+}, 1000);
 
 // Menu Section
 let hamburger = document.querySelector(".hamburger");
