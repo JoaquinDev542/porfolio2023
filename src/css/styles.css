@@ -1766,9 +1766,12 @@
       display: grid;
       grid-template-rows: auto 3.3556rem;
       height: 100%;
+      width: 100%;
     }
 
     .aboutContainerImg__img {
+      min-height: 30.0081rem;
+      min-width: 29.625rem;
       height: 100%;
       object-fit: cover;
       border-bottom: 3px solid var(--clr-border);
