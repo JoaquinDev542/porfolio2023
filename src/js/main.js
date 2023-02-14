@@ -23,6 +23,7 @@ setTimeout(function() {
 
 // Menu Section
 let hamburger = document.querySelector(".hamburger");
+let closeSvg = document.querySelector(".close");
 let menuOpen = document.querySelector(".menuOpen");
 let menuLinks = document.querySelectorAll(".menuOpenList__link");
 let heroMoveText = document.querySelector(".heroMoveText");
@@ -30,6 +31,7 @@ let main = document.querySelector(".main");
 let footer = document.querySelector(".footer");
 
 hamburger.addEventListener("click", toggleActiveClass);
+closeSvg.addEventListener("click", toggleActiveClass);
 menuLinks.forEach(link => link.addEventListener("click", toggleActiveClass));
 
 function toggleActiveClass() {
@@ -37,6 +39,8 @@ function toggleActiveClass() {
   heroMoveText.classList.toggle("active");
   main.classList.toggle("active");
   footer.classList.toggle("active");
+  hamburger.classList.toggle("active");
+  closeSvg.classList.toggle("active");
 }
 
 // Header Bg Section

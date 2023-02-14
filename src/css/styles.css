@@ -512,6 +512,26 @@
     transition: margin-right .2s;
   }
 
+  .close {
+    display:none;
+  }
+  
+  .close__img {
+    margin: 7px 0;
+  }
+
+  .close.active {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active {
+    display: none;
+  }
+
   .menuOpen {
     display: block;
     position: absolute;
