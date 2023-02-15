@@ -1117,6 +1117,7 @@
     position: relative;
     height: 18.75rem;
     overflow: hidden;
+    background-color: var(--clr-border);
   }
 
   .projectImgText {
@@ -1151,7 +1152,7 @@
   .projectImg__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-top: 3px solid var(--clr-border);
     transition: transform .5s ease ;
   }
