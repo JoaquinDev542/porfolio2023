@@ -127,10 +127,13 @@ aboutContainerInfoSubtitles__spanSecond.addEventListener("click", toggleAboutInf
 // DarkMode
 let darkModeContainer = document.querySelector(".darkModeContainer");
 let menuOpenDarkMode__link = document.querySelector(".menuOpenDarkMode__link");
+let body = document.querySelector(".body");
 let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
 const toggleColorScheme = () => {
     document.documentElement.classList.toggle(colorSchemeQueryList.matches ? "whiteMode" : "darkMode");
+    // body.style.backgroundImage = "url('../../image/noiseDM.png')";
+    body.classList.toggle('active');
 };
 
 darkModeContainer.addEventListener("click", toggleColorScheme);

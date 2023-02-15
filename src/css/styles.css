@@ -346,9 +346,14 @@
     font-size: var(--fs-paragraph-mobile);
     font-family: var(--ff-paragraph);
     background-color: var(--bg-bodyClass);
-    /* font-display: swap; */
+    font-display: swap;
     color: var(--clr-paragraph);
     transition: .5s color;
+    background-image: url(../../image/noise.png);
+  }
+
+  .body.active {
+    background-image: url(../../image/noiseDM.png);
   }
 
   body::-webkit-scrollbar {
@@ -1707,9 +1712,13 @@
     }
 
     .heroInformationContent {
-      opacity: 0.8;
-      background-image: radial-gradient(#444cf7 0.8px, #e5e5f7 0.8px);
-      background-size: 16px 16px;
+      /* opacity: 0.8; */
+      /* background-image: radial-gradient(var(--clr-title) 0.8px, var(--bg-body) 0.8px); */
+      /* background-size: 16px 16px; */
+      background-image: url(../../image/giphy.gif); 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
 
     .heroInformationSocialMedia {
