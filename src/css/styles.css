@@ -349,13 +349,8 @@
     font-display: swap;
     color: var(--clr-paragraph);
     transition: .5s color;
-    background-image: url(../../image/noiseDM.png);
   }
   
-  .body.active {
-    background-image: url(../../image/noise.png);
-  }
-
   body::-webkit-scrollbar {
     width: 5px;
   }

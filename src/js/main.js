@@ -132,8 +132,6 @@ let colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
 const toggleColorScheme = () => {
     document.documentElement.classList.toggle(colorSchemeQueryList.matches ? "whiteMode" : "darkMode");
-    // body.style.backgroundImage = "url('../../image/noiseDM.png')";
-    body.classList.toggle('active');
 };
 
 darkModeContainer.addEventListener("click", toggleColorScheme);
